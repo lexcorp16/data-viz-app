@@ -9,6 +9,7 @@
       sliderFactory
         .getData()
         .then(response => {
+          showToast('Customer Data Loaded!');
           $scope.data = response.data.data;
           $scope.data.sort(
             (a, b) => b.total_transaction_amount - a.total_transaction_amount,
@@ -44,7 +45,7 @@
             .simple()
             .content(message)
             .position('top, right')
-            .hideDelay(3000),
+            .hideDelay(2500),
         );
       };
     });

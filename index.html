@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,15 +15,8 @@
   <body>
     <div class="container" ng-app="ngApp" ng-controller="sliderController">
       <h1 class="title">Share of Revenue</h1>
-      <md-slider
-        class="slider md-primary"
-        ng-model="noOfCustomers"
-        ng-change="calculatePercent()"
-        min="1"
-        max="{{ maxValue }}"
-        aria-label="slider"
-        md-discrete
-      >
+      <md-slider class="slider md-primary" ng-model="noOfCustomers" ng-change="calculatePercent()" min="1" max="{{ maxValue }}"
+        aria-label="slider" md-discrete>
       </md-slider>
       <p>
         Your top
@@ -41,4 +35,5 @@
     <script src="components/slider.ctr.js"></script>
     <script src="components/slider.fac.js"></script>
   </body>
+
 </html>
