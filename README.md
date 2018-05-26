@@ -1,6 +1,6 @@
 # Data Visualization App
 
- Displays a ange slider that shows what percentage of total payments were made by an arbitrary number of top customers.
+ Displays a range slider that shows what percentage of total payments were made by an arbitrary number of top paying customers.
 
 
 # Installing 
