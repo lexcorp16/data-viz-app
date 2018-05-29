@@ -5,11 +5,14 @@
     .module('ngApp')
     .controller('sliderController', ($scope, sliderFactory, $mdToast) => {
       $scope.noOfCustomers = 3;
+      $scope.dataLoading = true;
 
       sliderFactory
         .getData()
         .then(response => {
+          $scope.dataLoading = false;
           showToast('Customer Data Loaded!');
+
           $scope.data = response.data.data;
           $scope.data.sort(
             (a, b) => b.total_transaction_amount - a.total_transaction_amount,
@@ -45,7 +48,7 @@
             .simple()
             .content(message)
             .position('top, right')
-            .hideDelay(2500),
+            .hideDelay(1500),
         );
       };
     });

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="ngApp">
 
   <head>
     <meta charset="UTF-8">
@@ -13,8 +13,10 @@
   </head>
 
   <body>
-    <div class="container" ng-app="ngApp" ng-controller="sliderController">
+    <div class="container" ng-controller="sliderController">
       <h1 class="title">Share of Revenue</h1>
+
+      <md-progress-circular ng-show="dataLoading" md-mode="indeterminate"></md-progress-circular>
       <md-slider class="slider md-primary" ng-model="noOfCustomers" ng-change="calculatePercent()" min="1" max="{{ maxValue }}"
         aria-label="slider" md-discrete>
       </md-slider>
